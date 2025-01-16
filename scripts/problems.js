@@ -78,5 +78,67 @@ export default {
             }
         },
         twoPointers: {}
+    },
+    algorithms: {
+        search: {
+            LinearSearch: {
+                fn: "linearSearch",
+                args: "nums: number[], target: number",
+                return: "number",
+                difficulty: "easy",
+                tags: ["search"],
+                description: "Given an array of integers nums and an integer target, return the index of the target in the array. If the target is not in the array, return -1.",
+            },
+            BinarySearch: {
+                fn: "binarySearch",
+                args: "nums: number[], target: number",
+                return: "number",
+                difficulty: "easy",
+                tags: ["search"],
+                description: "Given a sorted array of integers nums and an integer target, return the index of the target in the array. If the target is not in the array, return -1.",
+            }
+        },
+        sorting: {
+            BubbleSort: {
+                fn: "bubbleSort",
+                args: "nums: number[]",
+                return: "number[]",
+                difficulty: "easy",
+                tags: ["sorting"],
+                description: "Given an array of integers nums, sort the array in ascending order using the Bubble Sort algorithm.",
+            },
+            InsertionSort: {
+                fn: "insertionSort",
+                args: "nums: number[]",
+                return: "number[]",
+                difficulty: "easy",
+                tags: ["sorting"],
+                description: "Given an array of integers nums, sort the array in ascending order using the Insertion Sort algorithm.",
+            },
+            SelectionSort: {
+                fn: "selectionSort",
+                args: "nums: number[]",
+                return: "number[]",
+                difficulty: "easy",
+                tags: ["sorting"],
+                description: "Given an array of integers nums, sort the array in ascending order using the Selection Sort algorithm.",
+            },
+            QuickSort: {
+                fn: "quickSort",
+                args: "nums: number[]",
+                return: "number[]",
+                difficulty: "easy",
+                tags: ["sorting"],
+                description: "Given an array of integers nums, sort the array in ascending order using the Quick Sort algorithm.",
+            },
+            MergeSort: {
+                fn: "mergeSort",
+                args: "nums: number[]",
+                return: "number[]",
+                difficulty: "easy",
+                tags: ["sorting"],
+                description: "Given an array of integers nums, sort the array in ascending order using the Merge Sort algorithm.",
+            }
+        },
     }
 };

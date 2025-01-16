@@ -6,7 +6,7 @@ export default {
             // "ValidAnagram",
             // "GroupAnagrams",
             // "TopKFrequentElements",
-            "EncodeAndDecodeStrings"
+            // "EncodeAndDecodeStrings"
             // "ProductOfArrayExceptSelf",
             // "ValidSudoku",
             // "LongestConsecutiveSequence",
@@ -16,14 +16,15 @@ export default {
     },
     algorithms: {
         search: [
-            // "BinarySearch",
+            "LinearSearch",
+            "BinarySearch",
         ],
         sorting: [
             // "BubbleSort",
             // "InsertionSort",
             // "SelectionSort",
-            // "MergeSort",
             // "QuickSort",
+            // "MergeSort",
         ],
     },
 };
