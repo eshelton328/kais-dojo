@@ -1,4 +1,4 @@
-import topKFrequent from '@code/TopKFrequentElements';
+import { topKFrequent } from '@code/TopKFrequentElements';
 
 describe('TopKFrequentElements', () => {
     it('should return k most frequent elements', () => {

@@ -10,7 +10,6 @@ const src_path = path.join(__dirname, '..', 'src');
 
 function createProblemFile(problemName, problem) {
     fs.mkdirSync(src_path, { recursive: true });
-
     const filePath = path.join(src_path, `${problemName}.ts`);
     const description = problem.description ?
         `/**\n${problem.description}\n */\n\n` :
@@ -18,12 +17,38 @@ function createProblemFile(problemName, problem) {
 
     let content = description;
 
-    // Add first function
-    content += `export function ${problem.fn}(${problem.args}): ${problem.return} {\n\n}\n\n`;
+    if (problem.type === 'fn') {
+        // Handle function type problems
+        content += `export function ${problem.fn}(${problem.args}): ${problem.return} {\n\n}\n\n`;
 
-    // Add second function if it exists
-    if (problem.fn2) {
-        content += `export function ${problem.fn2}(${problem.args2}): ${problem.return2} {\n\n}`;
+        // Add second function if it exists
+        if (problem.fn2) {
+            content += `export function ${problem.fn2}(${problem.args2}): ${problem.return2} {\n\n}`;
+        }
+    } else if (problem.type === 'class') {
+        // Handle class type problems
+        const genericType = problem.generic || '';
+        content += `export default class ${problemName}${genericType} {\n`;
+
+        // Add properties
+        if (problem.properties) {
+            problem.properties.forEach(prop => {
+                content += `    ${prop.scope || 'private'} ${prop.name}: ${prop.type};\n`;
+            });
+            content += '\n';
+        }
+
+        // Add constructor
+        content += `    constructor() {\n\n    }\n\n`;
+
+        // Add methods
+        if (problem.methods) {
+            problem.methods.forEach(method => {
+                content += `    ${method.name}(${method.args}): ${method.return} {\n\n    }\n\n`;
+            });
+        }
+
+        content += `}\n`;
     }
 
     fs.writeFileSync(filePath, content);
@@ -61,6 +86,9 @@ function generateProblems() {
     // Generate problems based on config
     Object.entries(config).forEach(([category, subcategories]) => {
         Object.entries(subcategories).forEach(([subcategory, problemList]) => {
+            // Skip if problemList is not an array
+            if (!Array.isArray(problemList)) return;
+
             problemList.forEach(problemName => {
                 if (problemName.startsWith('//')) return; // Skip commented problems
 

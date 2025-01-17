@@ -6,8 +6,8 @@ export default {
             // "ValidAnagram",
             // "GroupAnagrams",
             // "TopKFrequentElements",
-            // "EncodeAndDecodeStrings"
-            // "ProductOfArrayExceptSelf",
+            // "EncodeAndDecodeStrings",
+            "ProductOfArrayExceptSelf",
             // "ValidSudoku",
             // "LongestConsecutiveSequence",
         ],
@@ -16,8 +16,8 @@ export default {
     },
     algorithms: {
         search: [
-            "LinearSearch",
-            "BinarySearch",
+            // "LinearSearch",
+            // "BinarySearchList",
         ],
         sorting: [
             // "BubbleSort",
@@ -27,4 +27,18 @@ export default {
             // "MergeSort",
         ],
     },
+    dataStructures: {
+        ds: [
+            // "SinglyLinkedList",
+            // "DoublyLinkedList",
+            // "Stack",
+            // "Queue",
+            // "BinarySearchTree",
+            // "MinHeap",
+            // "MaxHeap",
+            // "Trie",
+            // "Graph",
+        ]
+    }
 };
+

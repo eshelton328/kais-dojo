@@ -1,4 +1,4 @@
-import isAnagram from '@code/ValidAnagram';
+import { isAnagram } from '@code/ValidAnagram';
 
 describe('ValidAnagram', () => {
     it('should return true for valid anagrams', () => {

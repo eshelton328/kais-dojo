@@ -1,4 +1,4 @@
-import containsDuplicates from '@code/ContainsDuplicates';
+import { containsDuplicates } from '@code/ContainsDuplicates';
 
 describe('ContainsDuplicates', () => {
     it('should return true when array contains duplicates', () => {

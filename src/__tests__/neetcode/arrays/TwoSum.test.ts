@@ -1,4 +1,4 @@
-import twoSum from '@code/TwoSum';
+import { twoSum } from '@code/TwoSum';
 
 describe('TwoSum', () => {
     it('should find first pair of numbers that add up to target', () => {

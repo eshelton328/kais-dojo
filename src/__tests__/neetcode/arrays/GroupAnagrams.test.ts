@@ -1,4 +1,4 @@
-import groupAnagrams from '@code/GroupAnagrams';
+import { groupAnagrams } from '@code/GroupAnagrams';
 
 describe('GroupAnagrams', () => {
     it('should group basic anagrams together', () => {
