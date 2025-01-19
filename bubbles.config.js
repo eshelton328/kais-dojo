@@ -1,14 +1,14 @@
 export default {
     neetcode: {
         arrays: [
-            // "ContainsDuplicates",
-            // "TwoSum",
-            // "ValidAnagram",
-            // "GroupAnagrams",
-            // "TopKFrequentElements",
-            // "EncodeAndDecodeStrings",
+            "ContainsDuplicates",
+            "TwoSum",
+            "ValidAnagram",
+            "GroupAnagrams",
+            "TopKFrequentElements",
+            "EncodeAndDecodeStrings",
             "ProductOfArrayExceptSelf",
-            // "ValidSudoku",
+            "ValidSudoku",
             // "LongestConsecutiveSequence",
         ],
         twoPointers: [],
