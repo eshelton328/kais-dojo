@@ -1,17 +1,23 @@
 export default {
     neetcode: {
         arrays: [
-            "ContainsDuplicates",
-            "TwoSum",
-            "ValidAnagram",
-            "GroupAnagrams",
-            "TopKFrequentElements",
-            "EncodeAndDecodeStrings",
-            "ProductOfArrayExceptSelf",
-            "ValidSudoku",
+            // "ContainsDuplicates",
+            // "TwoSum",
+            // "ValidAnagram",
+            // "GroupAnagrams",
+            // "TopKFrequentElements",
+            // "EncodeAndDecodeStrings",
+            // "ProductOfArrayExceptSelf",
+            // "ValidSudoku",
             // "LongestConsecutiveSequence",
         ],
-        twoPointers: [],
+        twoPointers: [
+            "ValidPalindrome",
+            "TwoSumSorted",
+            "ThreeSum",
+            // "ContainerWithMostWater",
+            // "TrappingRainWater",
+        ],
         slidingWindow: [],
     },
     algorithms: {
