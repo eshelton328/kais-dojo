@@ -255,6 +255,29 @@ export default {
                     {
                         args: "[1, 2, 3, 4, 5, 6, 7, 8, 9]",
                         return: "[[1, 2, 3], [4, 5, 6], [7, 8, 9]]",
+                    },
+                    {
+                        args: "[-1, 0, 1, 2, -1, -4]",
+                        return: "[[-1, 0, 1], [-1, -1, 2]]",
+                    }
+                ]
+            },
+            ContainerWithMostWater: {
+                type: "fn",
+                fn: "maxArea",
+                args: "height: number[]",
+                return: "number",
+                difficulty: "medium",
+                tags: ["array", "two pointers"],
+                description: "Given an array of integers height representing the height of vertical lines on a coordinate plane, return the maximum area of water that can be contained between two lines.",
+                examples: [
+                    {
+                        args: "[1, 8, 6, 2, 5, 4, 8, 3, 7]",
+                        return: "49",
+                    },
+                    {
+                        args: "[1, 1]",
+                        return: "1",
                     }
                 ]
             }
