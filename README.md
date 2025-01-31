@@ -6,7 +6,7 @@
 
 ### 🌌 **About the Dojo**
 
-Welcome, warrior! You've arrived at **Kai's Dojo**, where the strongest coders train to unleash their ultimate potential. Just like Goku's relentless pursuit to become the greatest, this dojo is here to push you beyond your limits. 
+Welcome, warrior! You've arrived at **Kai's Dojo**, where the strongest coders train to unleash their ultimate potential. Just like Goku's relentless pursuit to become the greatest, this dojo is here to push you beyond your limits.
 
 In this dojo, you'll:
 - Sharpen your **data structures and algorithms** skills.
@@ -20,7 +20,7 @@ Every challenge here is a step closer to mastering the **Art of Code Combat**. A
 
 ### 🏋️‍♂️ **Training Modules**
 
-1. **The Hyperbolic Time Chamber**: 
+1. **The Hyperbolic Time Chamber**:
    - Focus on **data structures** (arrays, trees, graphs, etc.).
    - Time complexity feels like a year of training in one day.
 
@@ -37,32 +37,6 @@ Every challenge here is a step closer to mastering the **Art of Code Combat**. A
 5. **System Design Spirit Bomb**:
    - Learn to design scalable and efficient systems by gathering all your skills into one powerful attack.
 
----
-
-### 💡 **Training Philosophy**
-
-1. **Power Up Gradually**: Start with beginner-level problems and ascend to legendary challenges.
-2. **Kamehameha Knowledge Sharing**: Collaborate, discuss, and contribute to help others in their training journey.
-3. **Never Stop Training**: Keep pushing your limits, whether you're debugging or building a new system.
-
----
-
-### 📜 **Contributing**
-
-Just like Goku couldn't do it alone, neither can we! Want to share your knowledge and add challenges to the dojo? Here’s how:
-1. Fork the repository.
-2. Add your training module (problem, design, or solution).
-3. Submit a pull request with your contribution.
-
----
-
-### 🎮 **Rules of Engagement**
-
-- **Train Hard**: Focus on improvement rather than perfection.
-- **Help Your Fellow Fighters**: Encourage others on their coding journey.
-- **Stay True to the Code**: Follow clean coding practices.
-
----
 
 ### 🚀 **Next Steps**
 - Start your journey in [The Hyperbolic Time Chamber](#training-modules).
