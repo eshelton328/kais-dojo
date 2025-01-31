@@ -14,36 +14,18 @@ In this dojo, you'll:
 - Master **design patterns** to craft elegant solutions.
 - Hone your knowledge of **JavaScript, React, SQL, and system design**.
 
-Every challenge here is a step closer to mastering the **Art of Code Combat**. Are you ready to level up?
+---
+
+### 🚀 **How to Get Started**
+
+- Clone the repo
+- Install node modules
+- Uncomment the problems you'd wish to practice
+- Run npm run generate
+- After providing solutions for the problems run npm run test
+- You can test an individual problem by running npx jest <ProblemName> if you have jest installed locally
 
 ---
 
-### 🏋️‍♂️ **Training Modules**
-
-1. **The Hyperbolic Time Chamber**:
-   - Focus on **data structures** (arrays, trees, graphs, etc.).
-   - Time complexity feels like a year of training in one day.
-
-2. **King Kai's Technique Trials**:
-   - Improve your **algorithms** and learn to tackle problems like Goku battling Vegeta.
-   - Sorting, searching, dynamic programming, and more.
-
-3. **Fusion Dance of Frameworks**:
-   - Merge your React and JavaScript knowledge for powerful solutions.
-
-4. **Dragon Radar for Databases**:
-   - Master SQL to find the most efficient path to your data (a.k.a. the Dragon Balls).
-
-5. **System Design Spirit Bomb**:
-   - Learn to design scalable and efficient systems by gathering all your skills into one powerful attack.
-
-
-### 🚀 **Next Steps**
-- Start your journey in [The Hyperbolic Time Chamber](#training-modules).
-- Contribute to [Kai's Dojo Challenges](#contributing).
-- Share your progress and inspire others!
-
----
 
 <h2 align="center">"A Saiyan's strength is fueled by their will to improve."</h2>
-<h3 align="center">Let’s code and train like Goku—relentless and unstoppable!</h3>
