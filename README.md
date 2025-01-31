@@ -8,7 +8,7 @@
 
 Welcome, warrior! You've arrived at **Kai's Dojo**, where the strongest train to unleash their ultimate potential. This repo is here to push you beyond your limits.
 
-In this dojo, you'll:
+Here you will:
 - Sharpen your **data structures and algorithms** skills.
 - Overcome **technical challenges** like a Super Saiyan.
 - Master **design patterns** to craft elegant solutions.
