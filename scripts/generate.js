@@ -17,6 +17,14 @@ function createProblemFile(problemName, problem) {
 
     let content = description;
 
+    if (problem.examples && problem.examples.length > 0) {
+        content += '/**\nExamples:\n';
+        problem.examples.forEach(example => {
+            content += ` * Input: ${example.args}\n * Output: ${example.return}\n`;
+        });
+        content += ' */\n\n';
+    }
+
     if (problem.type === 'fn') {
         // Handle function type problems
         content += `export function ${problem.fn}(${problem.args}): ${problem.return} {\n\n}\n\n`;

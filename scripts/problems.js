@@ -280,8 +280,185 @@ export default {
                         return: "1",
                     }
                 ]
+            },
+            TrappingRainWaterTP: {
+                type: "fn",
+                fn: "trap",
+                args: "height: number[]",
+                return: "number",
+                difficulty: "hard",
+                tags: ["array", "two pointers"],
+                description: "Given an array of integers height representing the height of vertical lines on a coordinate plane, return the maximum area of water that can be contained between two lines.",
+                examples: [
+                    {
+                        args: "[0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]",
+                        return: "6",
+                    },
+                    {
+                        args: "[4, 2, 0, 3, 2, 5]",
+                        return: "9",
+                    }
+                ]
             }
-        }
+        },
+        stack: {
+            ValidParentheses: {
+                type: "fn",
+                fn: "isValid",
+                args: "s: string",
+                return: "boolean",
+                difficulty: "easy",
+                tags: ["string", "stack"],
+                description: "Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.",
+                examples: [
+                    {
+                        args: "'([{}])'",
+                        return: "true",
+                    },
+                    {
+                        args: "'(]'",
+                        return: "false",
+                    },
+                ]
+            },
+            MinStack: {
+                type: "class",
+                generic: "<T>",
+                methods: [
+                    {
+                        name: "push",
+                        args: "item: T",
+                        return: "void",
+                    },
+                    {
+                        name: "pop",
+                        args: "",
+                        return: "T | undefined",
+                    },
+                    {
+                        name: "top",
+                        args: "",
+                        return: "T | undefined",
+                    },
+                    {
+                        name: "getMin",
+                        args: "",
+                        return: "T | undefined",
+                    }
+                ],
+                ...length_property,
+            },
+            EvaluateReversePolishNotation: {
+                type: "fn",
+                fn: "evalRPN",
+                args: "tokens: string[]",
+                return: "number",
+                difficulty: "medium",
+                tags: ["stack"],
+                description: "Evaluate the value of an arithmetic expression in Reverse Polish Notation.",
+                examples: [
+                    {
+                        args: "['2', '1', '+', '3', '*']",
+                        return: "9",
+                    },
+                    {
+                        args: "['4', '13', '5', '/', '+']",
+                        return: "6",
+                    }
+                ]
+            },
+            GenerateParentheses: {
+                type: "fn",
+                fn: "generateParenthesis",
+                args: "n: number",
+                return: "string[]",
+                difficulty: "medium",
+                tags: ["string", "backtracking"],
+                description: "Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.",
+                examples: [
+                    {
+                        args: "3",
+                        return: "['((()))', '(()())', '(())()', '()(())', '()()()']",
+                    },
+                    {
+                        args: "1",
+                        return: "['()']",
+                    }
+                ]
+            },
+            DailyTemperatures: {
+                type: "fn",
+                fn: "dailyTemperatures",
+                args: "temperatures: number[]",
+                return: "number[]",
+                difficulty: "medium",
+                tags: ["array", "stack"],
+                description: "Given an array of integers temperatures representing the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature.",
+                examples: [
+                    {
+                        args: "[73, 74, 75, 71, 69, 72, 76, 73]",
+                        return: "[1, 1, 4, 2, 1, 1, 0, 0]",
+                    },
+                    {
+                        args: "[30, 40, 50, 60]",
+                        return: "[1, 1, 1, 0]",
+                    }
+                ]
+            },
+            CarFleet: {
+                type: "fn",
+                fn: "carFleet",
+                args: "target: number, position: number[], speed: number[]",
+                return: "number",
+                difficulty: "medium",
+                tags: ["array", "stack"],
+                description: "There are n cars going to the same destination along a one-lane road. The destination is target miles away.",
+                examples: [
+                    {
+                        args: "[10, 8, 0, 5, 3], [2, 4, 1, 1, 3], 10",
+                        return: "3",
+                    }
+                ]
+            },
+            LargestRectangleInHistogram: {
+                type: "fn",
+                fn: "largestRectangleArea",
+                args: "heights: number[]",
+                return: "number",
+                difficulty: "hard",
+                tags: ["array", "stack"],
+                description: "Given an array of integers heights representing the histogram's bar height where the width of each bar is 1, return the area of the largest rectangle in the histogram.",
+                examples: [
+                    {
+                        args: "[2, 1, 5, 6, 2, 3]",
+                        return: "10",
+                    },
+                    {
+                        args: "[2, 4]",
+                        return: "4",
+                    }
+                ]
+            },
+            TrappingRainWaterStack: {
+                type: "fn",
+                fn: "trap",
+                args: "height: number[]",
+                return: "number",
+                difficulty: "hard",
+                tags: ["array", "stack"],
+                description: "Given an array of integers height representing the height of vertical lines on a coordinate plane, return the maximum area of water that can be contained between two lines.",
+                examples: [
+                    {
+                        args: "[0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]",
+                        return: "6",
+                    },
+                    {
+                        args: "[4, 2, 0, 3, 2, 5]",
+                        return: "9",
+                    }
+                ]
+            }
+        },
     },
     algorithms: {
         search: {
@@ -456,22 +633,70 @@ export default {
                         return: "boolean",
                     },
                     {
-                        name: "InOrderTraversal",
+                        name: "inOrder",
                         args: "",
                         return: "T[]",
                     },
                     {
-                        name: "PreOrderTraversal",
+                        name: "preOrder",
                         args: "",
                         return: "T[]",
                     },
                     {
-                        name: "PostOrderTraversal",
+                        name: "postOrder",
                         args: "",
                         return: "T[]",
+                    },
+                    {
+                        name: "levelOrder",
+                        args: "",
+                        return: "T[][]"
                     }
                 ],
             }
         }
+    },
+    misc: {
+        math: {
+            RomanToInteger: {
+                type: "fn",
+                fn: "romanToInt",
+                args: "s: string",
+                return: "number",
+                difficulty: "easy",
+                tags: ["math"],
+                description: "Given a roman numeral, convert it to an integer.",
+                examples: [
+                    {
+                        args: "'III'",
+                        return: "3",
+                    },
+                    {
+                        args: "'LVIII'",
+                        return: "58",
+                    }
+                ]
+            },
+            IntegerToRoman: {
+                type: "fn",
+                fn: "intToRoman",
+                args: "num: number",
+                return: "string",
+                difficulty: "medium",
+                tags: ["math"],
+                description: "Given an integer, convert it to a roman numeral.",
+                examples: [
+                    {
+                        args: "3",
+                        return: "'III'",
+                    },
+                    {
+                        args: "58",
+                        return: "'LVIII'",
+                    }
+                ]
+            }
+        },
     }
 };
+

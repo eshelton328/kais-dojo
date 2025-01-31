@@ -15,13 +15,25 @@ export default {
             // "ValidPalindrome",
             // "TwoSumSorted",
             // "ThreeSum",
-            "ContainerWithMostWater",
-            // "TrappingRainWater",
+            // "ContainerWithMostWater",
+            // "TrappingRainWaterTP",
         ],
-        stack: [],
+        stack: [
+            // "ValidParentheses",
+            // "MinStack",
+            // "EvaluateReversePolishNotation",
+            // "GenerateParentheses",
+            "DailyTemperatures",
+            // "CarFleet",
+            // "LargestRectangleInHistogram",
+            // "TrappingRainWaterStack",
+        ],
         binarySearch: [],
         slidingWindow: [],
-        linkedList: [],
+        linkedList: [
+            "ReverseLinkedList",
+            "MergeTwoSortedLists",
+        ],
         trees: [],
         tries: [],
         backtracking: [],
@@ -53,6 +65,12 @@ export default {
             // "Trie",
             // "Graph",
         ]
+    },
+    misc: {
+        math: [
+            // "RomanToInteger",
+            // "IntegerToRoman",
+        ],
     }
 };
 
