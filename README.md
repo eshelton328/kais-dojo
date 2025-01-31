@@ -6,7 +6,7 @@
 
 ### 🌌 **About the Dojo**
 
-Welcome, warrior! You've arrived at **Kai's Dojo**, where the strongest coders train to unleash their ultimate potential. Just like Goku's relentless pursuit to become the greatest, this dojo is here to push you beyond your limits.
+Welcome, warrior! You've arrived at **Kai's Dojo**, where the strongest train to unleash their ultimate potential. This repo is here to push you beyond your limits.
 
 In this dojo, you'll:
 - Sharpen your **data structures and algorithms** skills.
