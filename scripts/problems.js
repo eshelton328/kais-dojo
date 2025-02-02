@@ -469,7 +469,7 @@ export default {
                 return: "number",
                 difficulty: "easy",
                 tags: ["array", "sliding window"],
-                description: "You are given an array prices where prices[i] is the price of a given stock on the ith day.",
+                description: "You are given an array prices where prices[i] is the price of a given stock on the ith day. You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.",
                 examples: [
                     {
                         args: "[7, 1, 5, 3, 6, 4]",
@@ -488,7 +488,7 @@ export default {
                 return: "number",
                 difficulty: "medium",
                 tags: ["string", "sliding window"],
-                description: "Given a string s, find the length of the longest substring without repeating characters.",
+                description: "Given a string s, find the length of the longest substring without repeating characters. Return 0 if the string is empty.",
                 examples: [
                     {
                         args: "'abcabcbb'",
@@ -507,7 +507,7 @@ export default {
                 return: "number",
                 difficulty: "medium",
                 tags: ["string", "sliding window"],
-                description: "Given a string s and an integer k, return the length of the longest substring of s such that the frequency of each character in the substring is less than or equal to k.",
+                description: "Given a string s and an integer k, return the length of the longest substring of s such that the frequency of each character in the substring is less than or equal to k. Return 0 if the string is empty.",
                 examples: [
                     {
                         args: "'AABABBA', 1",
@@ -526,7 +526,7 @@ export default {
                 return: "boolean",
                 difficulty: "medium",
                 tags: ["string", "sliding window"],
-                description: "Given two strings s1 and s2, return true if s2 contains a permutation of s1, or false otherwise.",
+                description: "Given two strings s1 and s2, return true if s2 contains a permutation of s1, or false otherwise. Return false if s1 is empty.",
                 examples: [
                     {
                         args: "'ab', 'eidbaooo'",
@@ -545,7 +545,7 @@ export default {
                 return: "string",
                 difficulty: "hard",
                 tags: ["string", "sliding window"],
-                description: "Given two strings s and t of lengths m and n respectively, return the minimum window substring of s such that every character in t (including duplicates) is included in the window.",
+                description: "Given two strings s and t of lengths m and n respectively, return the minimum window substring of s such that every character in t (including duplicates) is included in the window. Return an empty string if no such window exists.",
                 examples: [
                     {
                         args: "'ADOBECODEBANC', 'ABC'",
@@ -564,7 +564,7 @@ export default {
                 return: "number[]",
                 difficulty: "hard",
                 tags: ["array", "sliding window"],
-                description: "Given an array of integers nums and an integer k, return the maximum sum of any contiguous subarray of length k.",
+                description: "Given an array of integers nums and an integer k, return the maximum sum of any contiguous subarray of length k. Return an empty array if the array is empty.",
                 examples: [
                     {
                         args: "[1, 3, -1, -3, 5, 3, 6, 7], 3",
