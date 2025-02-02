@@ -10,7 +10,6 @@ Welcome, warrior! You've arrived at **Kai's Dojo**, where the strongest train to
 
 Here you will:
 - Sharpen your **data structures and algorithms** skills.
-- Overcome **technical challenges** like a Super Saiyan.
 - Master **design patterns** to craft elegant solutions.
 - Hone your knowledge of **JavaScript, React, SQL, and system design**.
 
