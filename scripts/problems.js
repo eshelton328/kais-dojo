@@ -418,7 +418,8 @@ export default {
                         args: "[10, 8, 0, 5, 3], [2, 4, 1, 1, 3], 10",
                         return: "3",
                     }
-                ]
+                ],
+                bigO: "O(n), O(n)",
             },
             LargestRectangleInHistogram: {
                 type: "fn",
@@ -437,7 +438,8 @@ export default {
                         args: "[2, 4]",
                         return: "4",
                     }
-                ]
+                ],
+                bigO: "O(n), O(n)",
             },
             TrappingRainWaterStack: {
                 type: "fn",
@@ -459,6 +461,122 @@ export default {
                 ]
             }
         },
+        slidingWindow: {
+            BestTimeToBuyAndSellStock: {
+                type: "fn",
+                fn: "maxProfit",
+                args: "prices: number[]",
+                return: "number",
+                difficulty: "easy",
+                tags: ["array", "sliding window"],
+                description: "You are given an array prices where prices[i] is the price of a given stock on the ith day.",
+                examples: [
+                    {
+                        args: "[7, 1, 5, 3, 6, 4]",
+                        return: "5",
+                    },
+                    {
+                        args: "[7, 6, 4, 3, 1]",
+                        return: "0",
+                    }
+                ]
+            },
+            LongestSubstringWithoutRepeatingCharacters: {
+                type: "fn",
+                fn: "lengthOfLongestSubstring",
+                args: "s: string",
+                return: "number",
+                difficulty: "medium",
+                tags: ["string", "sliding window"],
+                description: "Given a string s, find the length of the longest substring without repeating characters.",
+                examples: [
+                    {
+                        args: "'abcabcbb'",
+                        return: "3",
+                    },
+                    {
+                        args: "'bbbbb'",
+                        return: "1",
+                    }
+                ]
+            },
+            LongestRepeatingCharacterReplacement: {
+                type: "fn",
+                fn: "characterReplacement",
+                args: "s: string, k: number",
+                return: "number",
+                difficulty: "medium",
+                tags: ["string", "sliding window"],
+                description: "Given a string s and an integer k, return the length of the longest substring of s such that the frequency of each character in the substring is less than or equal to k.",
+                examples: [
+                    {
+                        args: "'AABABBA', 1",
+                        return: "4",
+                    },
+                    {
+                        args: "'ABAB', 2",
+                        return: "4",
+                    }
+                ]
+            },
+            PermutationInString: {
+                type: "fn",
+                fn: "checkInclusion",
+                args: "s1: string, s2: string",
+                return: "boolean",
+                difficulty: "medium",
+                tags: ["string", "sliding window"],
+                description: "Given two strings s1 and s2, return true if s2 contains a permutation of s1, or false otherwise.",
+                examples: [
+                    {
+                        args: "'ab', 'eidbaooo'",
+                        return: "true",
+                    },
+                    {
+                        args: "'ab', 'eidboaoo'",
+                        return: "false",
+                    }
+                ]
+            },
+            MinWindowSubstring: {
+                type: "fn",
+                fn: "minWindow",
+                args: "s: string, t: string",
+                return: "string",
+                difficulty: "hard",
+                tags: ["string", "sliding window"],
+                description: "Given two strings s and t of lengths m and n respectively, return the minimum window substring of s such that every character in t (including duplicates) is included in the window.",
+                examples: [
+                    {
+                        args: "'ADOBECODEBANC', 'ABC'",
+                        return: "'BANC'",
+                    },
+                    {
+                        args: "'a', 'aa'",
+                        return: "''",
+                    }
+                ]
+            },
+            SlidingWindowMaximum: {
+                type: "fn",
+                fn: "maxSlidingWindow",
+                args: "nums: number[], k: number",
+                return: "number[]",
+                difficulty: "hard",
+                tags: ["array", "sliding window"],
+                description: "Given an array of integers nums and an integer k, return the maximum sum of any contiguous subarray of length k.",
+                examples: [
+                    {
+                        args: "[1, 3, -1, -3, 5, 3, 6, 7], 3",
+                        return: "[3, 3, 5, 5, 6, 7]",
+                    },
+                    {
+                        args: "[1], 1",
+                        return: "[1]",
+                    }
+                ]
+            }
+        }
     },
     algorithms: {
         search: {
