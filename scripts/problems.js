@@ -498,7 +498,9 @@ export default {
                         args: "'bbbbb'",
                         return: "1",
                     }
-                ]
+                ],
+                time: "O(n) - n is the length of the string",
+                space: "O(m) - m is the number of unique characters in the string",
             },
             LongestRepeatingCharacterReplacement: {
                 type: "fn",
