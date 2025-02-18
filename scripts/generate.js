@@ -3,6 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import config from '../bubbles.config.js';
 import problems from './problems.js';
+import { updateStats, updatePackageJson, getActiveProblems } from './align-configs.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -26,19 +27,15 @@ function createProblemFile(problemName, problem) {
     }
 
     if (problem.type === 'fn') {
-        // Handle function type problems
         content += `export function ${problem.fn}(${problem.args}): ${problem.return} {\n\n}\n\n`;
 
-        // Add second function if it exists
         if (problem.fn2) {
             content += `export function ${problem.fn2}(${problem.args2}): ${problem.return2} {\n\n}`;
         }
     } else if (problem.type === 'class') {
-        // Handle class type problems
         const genericType = problem.generic || '';
         content += `export default class ${problemName}${genericType} {\n`;
 
-        // Add properties
         if (problem.properties) {
             problem.properties.forEach(prop => {
                 content += `    ${prop.scope || 'private'} ${prop.name}: ${prop.type};\n`;
@@ -46,10 +43,8 @@ function createProblemFile(problemName, problem) {
             content += '\n';
         }
 
-        // Add constructor
         content += `    constructor() {\n\n    }\n\n`;
 
-        // Add methods
         if (problem.methods) {
             problem.methods.forEach(method => {
                 content += `    ${method.name}(${method.args}): ${method.return} {\n\n    }\n\n`;
@@ -62,61 +57,59 @@ function createProblemFile(problemName, problem) {
     fs.writeFileSync(filePath, content);
 }
 
-function generateProblems() {
-    // Store existing test files
-    const testsPath = path.join(src_path, '__tests__');
-    let testsBackup = null;
-    if (fs.existsSync(testsPath)) {
-        testsBackup = {
-            path: testsPath,
-            contents: fs.readdirSync(testsPath, { recursive: true })
-        };
+function generateProblems(numProblems) {
+    const categories = Object.keys(config);
+    const selectedProblems = [];
+
+    categories.forEach(category => {
+        const subcategories = Object.keys(config[category]);
+        subcategories.forEach(subcategory => {
+            const problemList = config[category][subcategory];
+            const uncommentedProblems = problemList.filter(problemName => !problemName.startsWith('//'));
+            selectedProblems.push(...uncommentedProblems);
+        });
+    });
+
+    if (numProblems > selectedProblems.length || numProblems === 0) {
+        numProblems = selectedProblems.length;
     }
 
-    // Clear src directory but preserve tests
-    if (fs.existsSync(src_path)) {
-        const items = fs.readdirSync(src_path);
-        for (const item of items) {
-            if (item !== '__tests__') {
-                const itemPath = path.join(src_path, item);
-                fs.rmSync(itemPath, { recursive: true, force: true });
-            }
-        }
-    } else {
-        fs.mkdirSync(src_path);
+    for (let i = selectedProblems.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [selectedProblems[i], selectedProblems[j]] = [selectedProblems[j], selectedProblems[i]];
     }
 
-    // Restore tests if they were backed up
-    if (testsBackup) {
-        fs.mkdirSync(testsBackup.path, { recursive: true });
-    }
+    const problemsToGenerate = selectedProblems.slice(0, numProblems);
 
-    // Generate problems based on config
-    Object.entries(config).forEach(([category, subcategories]) => {
-        Object.entries(subcategories).forEach(([subcategory, problemList]) => {
-            // Skip if problemList is not an array
-            if (!Array.isArray(problemList)) return;
-
-            problemList.forEach(problemName => {
-                if (problemName.startsWith('//')) return; // Skip commented problems
-
-                const problem = problems[category]?.[subcategory]?.[problemName];
-                if (!problem) {
-                    console.error(`Problem definition not found for ${category}/${subcategory}/${problemName}`);
-                    return;
-                }
-
+    problemsToGenerate.forEach(problemName => {
+        const [category, subcategory] = findProblemCategoryAndSubcategory(problemName);
+        if (category && subcategory) {
+            const problem = problems[category][subcategory][problemName];
+            if (problem) {
                 createProblemFile(problemName, problem);
                 console.log(`Generated ${problemName}`);
-            });
-        });
+            } else {
+                console.error(`Problem definition not found for ${problemName}`);
+            }
+        } else {
+            console.error(`Category or subcategory not found for ${problemName}`);
+        }
     });
 }
 
-generateProblems();
+function findProblemCategoryAndSubcategory(problemName) {
+    for (const category in problems) {
+        for (const subcategory in problems[category]) {
+            if (problems[category][subcategory][problemName]) {
+                return [category, subcategory];
+            }
+        }
+    }
+    return [null, null];
+}
 
-// Update configs
-import { updateStats, updatePackageJson, getActiveProblems } from './align-configs.js';
+const numProblems = parseInt(process.argv[2], 10) || 0;
+generateProblems(numProblems);
 
 const activeProblems = getActiveProblems(config);
 updateStats(config);
