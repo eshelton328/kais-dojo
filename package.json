@@ -5,7 +5,8 @@
     "type": "module",
     "main": "index.js",
     "scripts": {
-        "test": "jest ContainsDuplicates TwoSum ValidAnagram GroupAnagrams TopKFrequentElements EncodeAndDecodeStrings ProductOfArrayExceptSelf ValidSudoku",
+        "test": "jest ContainsDuplicates TwoSum ValidAnagram GroupAnagrams TopKFrequentElements EncodeAndDecodeStrings ProductOfArrayExceptSelf ValidSudoku LongestConsecutiveSequence ValidPalindrome TwoSumSorted ThreeSum ContainerWithMostWater TrappingRainWaterTP ValidParentheses MinStack EvaluateReversePolishNotation GenerateParentheses DailyTemperatures CarFleet LargestRectangleInHistogram TrappingRainWaterStack BestTimeToBuyAndSellStock LongestSubstringWithoutRepeatingCharacters LongestRepeatingCharacterReplacement RotateImage LinearSearch BinarySearchList BubbleSort InsertionSort QuickSort MergeSort SinglyLinkedList DoublyLinkedList Stack Queue RomanToInteger IntegerToRoman",
+        "random": "node ./scripts/random.js",
         "generate": "node ./scripts/generate.js",
         "clear": "node ./scripts/clear.js"
     },
