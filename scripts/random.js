@@ -8,7 +8,6 @@ if (isNaN(numProblems) || numProblems <= 0) {
     process.exit(1);
 }
 
-// Call the generate script with the specified number of problems
 exec(`node ./scripts/generate.js ${numProblems}`, (error, stdout, stderr) => {
     if (error) {
         console.error(`Error: ${error.message}`);

@@ -3,7 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import config from '../bubbles.config.js';
 import problems from './problems.js';
-import { updateStats, updatePackageJson, getActiveProblems } from './align-configs.js';
+import { updatePackageJson } from './align-configs.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -95,6 +95,8 @@ function generateProblems(numProblems) {
             console.error(`Category or subcategory not found for ${problemName}`);
         }
     });
+
+    updatePackageJson(problemsToGenerate);
 }
 
 function findProblemCategoryAndSubcategory(problemName) {
@@ -110,7 +112,3 @@ function findProblemCategoryAndSubcategory(problemName) {
 
 const numProblems = parseInt(process.argv[2], 10) || 0;
 generateProblems(numProblems);
-
-const activeProblems = getActiveProblems(config);
-updateStats(config);
-updatePackageJson(activeProblems);
