@@ -262,6 +262,25 @@ export default {
                     }
                 ]
             },
+            LongestPalindromicSubstring: {
+                type: "fn",
+                fn: "longestPalindrome",
+                args: "s: string",
+                return: "string",
+                difficulty: "medium",
+                tags: ["string", "two pointers"],
+                description: "Given a string s, return the longest palindromic substring in s.",
+                examples: [
+                    {
+                        args: "'babad'",
+                        return: "'bab'",
+                    },
+                    {
+                        args: "'cbbd'",
+                        return: "'bb'",
+                    }
+                ]
+            },
             ContainerWithMostWater: {
                 type: "fn",
                 fn: "maxArea",
