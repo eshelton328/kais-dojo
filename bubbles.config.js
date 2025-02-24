@@ -1,20 +1,20 @@
 export default {
     neetcode: {
         arrays: [
-            // "ContainsDuplicates",
-            // "TwoSum",
-            // "ValidAnagram",
-            // "GroupAnagrams",
+            "ContainsDuplicates",
+            "TwoSum",
+            "ValidAnagram",
+            "GroupAnagrams",
             // "TopKFrequentElements",
             // "EncodeAndDecodeStrings",
-            // "ProductOfArrayExceptSelf",
+            "ProductOfArrayExceptSelf",
             // "ValidSudoku",
             // "LongestConsecutiveSequence",
         ],
         twoPointers: [
             // "ValidPalindrome",
             // "TwoSumSorted",
-            // "ThreeSum",
+            "ThreeSum",
             "LongestPalindromicSubstring"
             // "ContainerWithMostWater",
             // "TrappingRainWaterTP",
@@ -31,7 +31,7 @@ export default {
         ],
         binarySearch: [],
         slidingWindow: [
-            // "BestTimeToBuyAndSellStock",
+            "BestTimeToBuyAndSellStock",
             // "LongestSubstringWithoutRepeatingCharacters",
             // "LongestRepeatingCharacterReplacement",
             "PermutationInString",
@@ -44,6 +44,9 @@ export default {
         ],
         trees: [],
         tries: [],
+        heap: [],
+        intervals: [],
+        greedy: [],
         backtracking: [],
         heap: [],
         graphs:[],
