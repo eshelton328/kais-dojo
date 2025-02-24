@@ -598,6 +598,27 @@ export default {
                 ]
             }
         },
+        greedy: {
+            MaximumSubarray: {
+                type: "fn",
+                fn: "maxSubArray",
+                args: "nums: number[]",
+                return: "number",
+                difficulty: "medium",
+                tags: ["array", "greedy"],
+                description: "Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.",
+                examples: [
+                    {
+                        args: "[1, 2, 3, 4]",
+                        return: "10",
+                    },
+                    {
+                        args: "[-2, 1, -3, 4, -1, 2, 1, -5, 4]",
+                        return: "6",
+                    }
+                ]
+            },
+        },
         math: {
             RotateImage: {
                 type: "fn",
