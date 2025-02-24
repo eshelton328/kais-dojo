@@ -46,7 +46,9 @@ export default {
         tries: [],
         heap: [],
         intervals: [],
-        greedy: [],
+        greedy: [
+            "MaximumSubarray"
+        ],
         backtracking: [],
         heap: [],
         graphs:[],
